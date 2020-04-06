@@ -26,6 +26,7 @@ body {
 		display: flex;
 		flex-direction: row;
 	}
+
 	@media (min-width: 1200px) {
 		width: 1200px;
 	}
@@ -153,9 +154,11 @@ body {
 				.character-img {
 					position: relative;
 					min-height: 185px;
+
 					@media (min-width: 768px) {
 						min-height: 210px;
 					}
+
 					.character-title {
 						position: absolute;
 						bottom: 4px;
@@ -164,7 +167,7 @@ body {
 						color: $white;
 						padding: 0 10px;
 						width: 100%;
-						
+
 						.character-name {
 							font-size: 16px;
 							font-weight: 400;
