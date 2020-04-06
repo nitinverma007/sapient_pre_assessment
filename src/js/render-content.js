@@ -7,7 +7,7 @@ class RenderContent {
                 '<img src="' + result.image + '" alt="' + result.name + '" width  />' +
                 '<div class="character-title">' +
                     '<div class="character-name">' + result.name + '</div>' +
-                    '<div class="character-desc"><span>id: </span><span class="character-id">' + result.id + '</span> - <span>Created </span><span class="character-age">' + this.calculateIDCreationDate(result.created) + ' years ago </span></div>' +
+                    '<div class="character-desc"><p><span>id: </span><span class="character-id">' + result.id + '</span> - <span>Created </span><span class="character-age">' + this.calculateIDCreationDate(result.created) + ' years ago </span></div>' +
                 '</div>' +
             '</div>' +
             '<div class="character-details">' +
