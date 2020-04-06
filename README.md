@@ -1,13 +1,19 @@
-# sapient_pre_assessment
+## sapient_pre_assessment
 sapient_pre_assessment
 
 
-# For project setup, please run below commands
-npm install
+## Install dependencies
 
-npm run dev (for development env)
+```npm install```
 
-npm run prod (for production env)
+## To run in development mode
 
-#open webpage
+```npm run dev```
+
+##open webpage
+
 http://localhost:8080/
+
+## To build for production env
+
+```npm run prod```
