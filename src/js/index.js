@@ -1,26 +1,13 @@
 import '../scss/style.scss'
 import $ from 'jquery'
-import { RenderContent } from './render-content'
+import AjaxRequest from './ajax-request'
 
 $(document).ready(() => {
   const url = 'https://rickandmortyapi.com/api/character/?'
-  $.ajax({
-    type: 'GET',
-    url: url,
-    cache: false,
-    success: function (data) {
-      const apiResults = data.results
-      if (apiResults.length) {
-        apiResults.forEach(function (result, index) {
-          const renderContent = new RenderContent(result)
-          renderContent.renderHTML(result)
-        })
-      }
-    },
-    error: function (data) {
-      console.log('Error: ' + data)
-    }
-  })
+
+  const ajaxCalling = new AjaxRequest()
+  ajaxCalling.ajaxCall(url)
+
   $('.search-by-name').on('submit', function (e) {
     e.preventDefault()
     $('.character-card').empty()
@@ -28,23 +15,7 @@ $(document).ready(() => {
     const selectedKey = $(this).find("input[type='search']").attr('name')
     const selectedValue = $(this).find("input[type='search']").val()
     const dataParam = selectedKey + '=' + selectedValue
-    $.ajax({
-      type: 'GET',
-      url: url + dataParam,
-      cache: false,
-      success: function (data) {
-        const apiResults = data.results
-        if (apiResults.length) {
-          apiResults.forEach(function (result, index) {
-            const renderContent = new RenderContent(result)
-            renderContent.renderHTML(result)
-          })
-        }
-      },
-      error: function (data) {
-        console.log('Error: ' + data)
-      }
-    })
+    ajaxCalling.ajaxCall(url + dataParam)
   })
 
   $(document).on('change', 'input[type="checkbox"]', function (e) {
@@ -59,23 +30,7 @@ $(document).ready(() => {
       dataArray += [selectedKey] + '=' + selectedValue + '&'
     })
     dataArray = dataArray.slice(0, -1)
-    $.ajax({
-      type: 'GET',
-      url: url + dataArray,
-      cache: false,
-      success: function (data) {
-        const apiResults = data.results
-        if (apiResults.length) {
-          apiResults.forEach(function (result, index) {
-            const renderContent = new RenderContent(result)
-            renderContent.renderHTML(result)
-          })
-        }
-      },
-      error: function (data) {
-        console.log('Error: ' + data)
-      }
-    })
+    ajaxCalling.ajaxCall(url + dataArray)
   })
 
   $('select[name="sorting"]').on('change', function (e) {

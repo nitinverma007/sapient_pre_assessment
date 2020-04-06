@@ -7,7 +7,7 @@ class RenderContent {
                 '<img src="' + result.image + '" alt="' + result.name + '" width  />' +
                 '<div class="character-title">' +
                     '<div class="character-name">' + result.name + '</div>' +
-                    '<div class="character-desc"><span>id: </span><span class="character-id">' + result.id + '</span> - <span>Created </span><span class="character-age">' + result.created + '</span></div>' +
+                    '<div class="character-desc"><span>id: </span><span class="character-id">' + result.id + '</span> - <span>Created </span><span class="character-age">' + this.calculateIDCreationDate(result.created) + ' years ago </span></div>' +
                 '</div>' +
             '</div>' +
             '<div class="character-details">' +
@@ -33,7 +33,12 @@ class RenderContent {
                 '</div>' +
             '</div>' +
         '</article>'
+
     $('.character-card').append(htmlContent)
+  }
+
+  calculateIDCreationDate (creationDate) {
+    return ((new Date() - new Date(creationDate)) / (1000 * 60 * 60 * 24 * 365)).toFixed(1)
   }
 }
 export { RenderContent }

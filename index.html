@@ -1,7 +1,7 @@
 <!doctype html>
-<html>
+<html lang="en">
 	<head>
-		<title>Pre Assessment</title>
+		<title>Rick and Morty API</title>
 
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,13 +13,12 @@
 		<script src="./dist/main.js"></script>	
 	</head>
    <body>
-		<section class="character-container">
-			<aside class="character-side-bar">
-
-				<h2>Filters</h2>
+	    <main class="app-wrapper clearfix">
+			<aside class="character-side-bar clearfix">
+				<h2 class="heading">Filters</h2>
 				<div class="filters-body">
-					<h3>species</h3>
-					<form action="https://rickandmortyapi.com/api/character/">
+					<h3 class="filter-title">species</h3>
+					<form action="javascript:void(0);">
 						<input type="checkbox" id="human" name="human" value="Human">
 						<label for="human"> Human</label><br>
 						<input type="checkbox" id="mytholog" name="mytholog" value="Mytholog">
@@ -29,8 +28,8 @@
 					</form>
 				</div>
 				<div class="filters-body">
-					<h3>gender</h3>
-					<form action="https://rickandmortyapi.com/api/character/">
+					<h3 class="filter-title">gender</h3>
+					<form action="javascript:void(0);">
 						<input type="checkbox" id="male" name="male" value="Male">
 						<label for="male"> Male</label><br>
 						<input type="checkbox" id="female" name="female" value="Female">
@@ -38,8 +37,8 @@
 					</form>
 				</div>
 				<div class="filters-body">
-					<h3>origin</h3>
-					<form action="https://rickandmortyapi.com/api/character/">
+					<h3 class="filter-title">origin</h3>
+					<form action="javascript:void(0);">
 						<input type="checkbox" id="unknown" name="unknown" value="Unknown">
 						<label for="unknown"> Unknown</label><br>
 						<input type="checkbox" id="postApocalypticEarth" name="postApocalypticEarth" value="Post-Apocalyptic Earth">
@@ -52,20 +51,21 @@
 				</div>
 			</aside>
 			<section class="character-details-section">
-				<h1>Selected Filters</h1>
-				<div class="selected-filters"></div>
+				<div class="clearfix">					
+					<h1 class="heading">Selected Filters</h1>
+					<div class="selected-filters"></div>
+				</div>
 				<div class="character-search">
 					<div>
 						<p>Search by Name</p>
-						<form action="https://rickandmortyapi.com/api/character/" class="search-by-name">
+						<form class="search-by-name" action="javascript:void(0);">
 							<input type="search" id="name" name="name">
-							<label for="name"></label>
-							<input type="submit" class="hidden-xs">
+							<button type="submit">Search</button>
 						</form>
 					</div>
 					<div>
-						<form action="https://rickandmortyapi.com/api/character/">
-							<select name="sorting">
+						<form>
+							<select name="sorting" action="javascript:void(0);">
 								<option disabled selected>Sort by Id</option>
 								<option value="ascending">Ascending</option>
 								<option value="descending">Descending</option>
@@ -75,7 +75,6 @@
 				</div>
 				<section class="character-card"></section>
 			</section>
-		</section>
-
+		</main>
 	</body>
 </html>
