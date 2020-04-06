@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Pre Assessment</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta name="theme-color" content="#FF9800"/>
+		<link rel="shortcut icon" href="assets/images/favicon.ico">		
+		<link rel="stylesheet" href="./dist/main.css">	
+		<script src="./dist/main.js"></script>	
+	</head>
+   <body>
+		<section class="character-container">
+			<aside class="character-side-bar">
+
+				<h2>Filters</h2>
+				<div class="filters-body">
+					<h3>species</h3>
+					<form action="https://rickandmortyapi.com/api/character/">
+						<input type="checkbox" id="human" name="human" value="Human">
+						<label for="human"> Human</label><br>
+						<input type="checkbox" id="mytholog" name="mytholog" value="Mytholog">
+						<label for="mytholog"> Mytholog</label><br>
+						<input type="checkbox" id="otherSpecies" name="otherSpecies" value="Other Species">
+						<label for="otherSpecies"> Other Species</label>
+					</form>
+				</div>
+				<div class="filters-body">
+					<h3>gender</h3>
+					<form action="https://rickandmortyapi.com/api/character/">
+						<input type="checkbox" id="male" name="male" value="Male">
+						<label for="male"> Male</label><br>
+						<input type="checkbox" id="female" name="female" value="Female">
+						<label for="female"> Female</label>
+					</form>
+				</div>
+				<div class="filters-body">
+					<h3>origin</h3>
+					<form action="https://rickandmortyapi.com/api/character/">
+						<input type="checkbox" id="unknown" name="unknown" value="Unknown">
+						<label for="unknown"> Unknown</label><br>
+						<input type="checkbox" id="postApocalypticEarth" name="postApocalypticEarth" value="Post-Apocalyptic Earth">
+						<label for="postApocalypticEarth"> Post-Apocalyptic Earth</label><br>
+						<input type="checkbox" id="nuptia" name="nuptia" value="Nuptia 4">
+						<label for="nuptia"> Nuptia 4</label><br>
+						<input type="checkbox" id="otherOrigins" name="otherOrigins" value="Other Origins">
+						<label for="otherOrigins"> Other Origins...</label>
+					</form>
+				</div>
+			</aside>
+			<section class="character-details-section">
+				<h1>Selected Filters</h1>
+				<div class="selected-filters"></div>
+				<div class="character-search">
+					<div>
+						<p>Search by Name</p>
+						<form action="https://rickandmortyapi.com/api/character/" class="search-by-name">
+							<input type="search" id="name" name="name">
+							<label for="name"></label>
+							<input type="submit" class="hidden-xs">
+						</form>
+					</div>
+					<div>
+						<form action="https://rickandmortyapi.com/api/character/">
+							<select name="sorting">
+								<option disabled selected>Sort by Id</option>
+								<option value="ascending">Ascending</option>
+								<option value="descending">Descending</option>
+							</select>
+						</form>
+					</div>
+				</div>
+				<section class="character-card"></section>
+			</section>
+		</section>
+
+	</body>
+</html>
