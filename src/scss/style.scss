@@ -24,9 +24,10 @@ body {
 	@media (min-width: 768px) {
 		margin: 0 auto;
 		display: flex;
-		padding: 20px 0;
-		width: 1200px;
 		flex-direction: row;
+	}
+	@media (min-width: 1200px) {
+		width: 1200px;
 	}
 
 	.heading {
@@ -132,7 +133,7 @@ body {
 
 		.character-card {
 			background-color: $background;
-			padding: 10px;
+			padding: 10px 0 10px 10px;
 			margin: 20px 0;
 			display: flex;
 			flex-wrap: wrap;
@@ -142,16 +143,19 @@ body {
 				padding: 0;
 				border-radius: 10px;
 				margin-bottom: 10px;
-				width: calc(50% - 12px);
+				width: calc(50% - 10px);
 				margin-right: 10px;
 
 				@media (min-width: 768px) {
-					width: calc(25% - 12px);
+					width: calc(25% - 10px);
 				}
 
 				.character-img {
 					position: relative;
-					min-height: 210px;
+					min-height: 185px;
+					@media (min-width: 768px) {
+						min-height: 210px;
+					}
 					.character-title {
 						position: absolute;
 						bottom: 4px;
@@ -160,7 +164,7 @@ body {
 						color: $white;
 						padding: 0 10px;
 						width: 100%;
-
+						
 						.character-name {
 							font-size: 16px;
 							font-weight: 400;
