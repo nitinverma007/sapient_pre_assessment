@@ -28,18 +28,24 @@ body {
 		width: 1200px;
 		flex-direction: row;
 	}
-	.heading{
+
+	.heading {
 		font-size: 24px;
-    	font-weight: 100;
-	}
-	.filter-title{
 		font-weight: 100;
 	}
-	button, input[type='search'], select {
+
+	.filter-title {
+		font-weight: 100;
+	}
+
+	button,
+	input[type='search'],
+	select {
 		padding: 0 15px;
 		font-size: 14px;
 		height: 35px;
 	}
+
 	.character-side-bar {
 		flex: 1;
 		overflow: hidden;
@@ -66,6 +72,7 @@ body {
 	.character-details-section {
 		flex: 1;
 		overflow: hidden;
+
 		@media (min-width: 768px) {
 			flex: 1 1 75%;
 			margin-left: 10px;
@@ -85,10 +92,11 @@ body {
 
 		.character-search {
 			display: flex;
-    		justify-content: space-between;
+			justify-content: space-between;
 			width: auto;
 			flex-direction: column;
-    		align-items: stretch;
+			align-items: stretch;
+
 			button[type=submit] {
 				display: none;
 			}
@@ -101,6 +109,7 @@ body {
 			.search-by-name {
 				padding-bottom: 30px;
 			}
+
 			@media (min-width: 768px) {
 				align-items: flex-end;
 				flex-direction: row;
@@ -119,7 +128,6 @@ body {
 					padding-bottom: 0;
 				}
 			}
-
 		}
 
 		.character-card {
@@ -162,6 +170,7 @@ body {
 						.character-desc {
 							font-size: 10px;
 							margin: 10px 0;
+
 							@media (min-width: 768px) {
 								font-size: 12px;
 							}
@@ -181,9 +190,11 @@ body {
 					padding: 10px 5px;
 					background: $charcoal;
 					border-radius: 10px;
+
 					@media (min-width: 768px) {
 						padding: 20px 10px;
 					}
+
 					.character-attr {
 						font-size: 12px;
 						border-bottom: 1px solid $silver;
